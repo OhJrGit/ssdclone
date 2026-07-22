@@ -1,0 +1,21 @@
+# Chateau Collective -- Development & security tooling
+# Install with: pip install -r requirements-dev.txt
+# (After installing requirements.txt first)
+#
+# These are NOT needed at runtime — keep them out of production images.
+
+# Flask extensions (development)
+flask-wtf==1.3.0
+
+# Testing
+pytest==9.0.3
+pytest-flask==1.3.0
+
+# SAST
+bandit==1.8.3
+# semgrep ships no native Windows wheels, so skip it there (CI runs on Linux).
+# 1.119.0/1.120.0 were never published to PyPI; 1.118.0 is the nearest valid pin.
+semgrep==1.118.0 ; platform_system != "Windows"
+
+# Dependency vulnerability scanning
+pip-audit==2.9.0
