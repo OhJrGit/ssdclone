@@ -18,4 +18,4 @@ bandit==1.8.3
 semgrep==1.118.0 ; platform_system != "Windows"
 
 # Dependency vulnerability scanning
-pip-audit==2.9.0
+pip-audit==2.10.1
